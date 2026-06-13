@@ -1,0 +1,321 @@
+/* =====================================================
+   RESUME PRINT STYLES — A4 layout
+   ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* A4 dimensions: 210mm × 297mm ≈ 794px × 1123px at 96dpi */
+.resume {
+  width: 794px;
+  min-height: 1123px;
+  background: #ffffff;
+  color: #1a202c;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11.5px;
+  line-height: 1.55;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---- HEADER BAND ---- */
+.resume-header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 60%, #1a3050 100%);
+  color: #fff;
+  padding: 2rem 2.25rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.resume-header::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+.resume-header::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 30%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+.resume-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.2rem;
+  color: #fff;
+}
+
+.resume-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.resume-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.resume-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.resume-contact-item svg {
+  width: 11px;
+  height: 11px;
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+/* ---- BODY ---- */
+.resume-body {
+  display: grid;
+  grid-template-columns: 1fr 2px 2fr;
+  min-height: calc(1123px - 130px);
+}
+
+.resume-sidebar {
+  padding: 1.5rem 1.25rem;
+  background: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.resume-divider {
+  background: #e2e8f0;
+  width: 2px;
+}
+
+.resume-main {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* ---- SECTION ---- */
+.resume-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #2d5a8e;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.resume-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* ---- SUMMARY ---- */
+.resume-summary p {
+  font-size: 11px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+/* ---- SKILLS ---- */
+.resume-skills-group { margin-bottom: 0.75rem; }
+.resume-skills-group:last-child { margin-bottom: 0; }
+
+.resume-skills-cat {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.resume-skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.resume-skill-pill {
+  padding: 0.18rem 0.55rem;
+  border-radius: 99px;
+  background: #e0ecfa;
+  color: #1e4d82;
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid #c5dcf5;
+}
+
+/* ---- EXPERIENCE ---- */
+.resume-entry { margin-bottom: 1.1rem; }
+.resume-entry:last-child { margin-bottom: 0; }
+
+.resume-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.15rem;
+  gap: 0.5rem;
+}
+
+.resume-entry-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.resume-entry-date {
+  font-size: 10px;
+  color: #9ca3af;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.resume-entry-subtitle {
+  font-size: 11px;
+  color: #4b5563;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.resume-entry-location {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.resume-entry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.resume-entry-list li {
+  font-size: 10.5px;
+  color: #374151;
+  padding-left: 0.9rem;
+  position: relative;
+  line-height: 1.55;
+}
+.resume-entry-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #2d5a8e;
+  font-size: 8px;
+  top: 0.15em;
+}
+
+/* ---- PROJECTS ---- */
+.resume-project { margin-bottom: 1rem; }
+.resume-project:last-child { margin-bottom: 0; }
+
+.resume-project-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.resume-project-desc {
+  font-size: 10.5px;
+  color: #374151;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
+}
+
+.resume-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.resume-project-tag {
+  padding: 0.12rem 0.45rem;
+  border-radius: 99px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-size: 9.5px;
+  border: 1px solid #e5e7eb;
+}
+
+.resume-project-link {
+  font-size: 10px;
+  color: #2d5a8e;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* ---- EDUCATION ---- */
+.resume-edu-entry { margin-bottom: 0.85rem; }
+.resume-edu-entry:last-child { margin-bottom: 0; }
+
+.resume-edu-degree {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #111827;
+}
+.resume-edu-institution {
+  font-size: 11px;
+  color: #4b5563;
+}
+.resume-edu-meta {
+  font-size: 10px;
+  color: #9ca3af;
+  margin-top: 0.1rem;
+}
+
+/* ---- PRINT ---- */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body {
+    background: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .resume {
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+  .app-header, .editor-panel { display: none !important; }
+  .preview-pane {
+    background: #fff !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  .app-body, .app-wrapper { display: block !important; }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
